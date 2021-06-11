@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+    - name: stripe
+      description: This is a clone of a Postgres database
+      database: dbt-tutorial
+      tables:
+        - name: payment
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+            - name: orderid
+            - name: paymentmethod
+            - name: status
+            - name: amount
+            - name: created
